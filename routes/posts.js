@@ -8,7 +8,7 @@ const router = express.Router()
 // Read *
 router.get("/",(req,res)=>{
     // run get posts function and assign that to a variable
-    res.json({sucess: true, payload:''})
+    res.json({success: true, payload:''})
 
 })
 // Update
