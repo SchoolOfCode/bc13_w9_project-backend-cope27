@@ -2,15 +2,9 @@ import express from "express"
 import { createPost, getAllPosts } from "../models/index.js"
 const router = express.Router()
 
+
 //import functions from models
 /*
-{
-        'userName': 'Steph',
-        'projectGoal': 'Build an API for helping people',
-        'projectType': 'Build',
-        'projectTools': 'Express',
-        'collaborators': '4'
-    },
 
     {
     "userName": "Steph",
