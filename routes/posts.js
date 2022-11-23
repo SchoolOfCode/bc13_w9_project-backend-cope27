@@ -1,4 +1,5 @@
 import express from "express"
+//import { getAllPosts } from "../models/index.js"
 const router = express.Router()
 
 //import functions from models
@@ -6,9 +7,10 @@ const router = express.Router()
 // Create *
 
 // Read *
-router.get("/",(req,res)=>{
+router.get("/", async (req,res)=>{
     // run get posts function and assign that to a variable
-    res.json({success: true, payload:''})
+    //const allPosts = await getAllPosts();
+    res.json({success: true, payload: allPosts})
 
 })
 // Update

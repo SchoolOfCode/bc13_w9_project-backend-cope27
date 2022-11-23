@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000
 
 //put middleware here
 app.use(morgan ("dev"))
-app.use(express.static("public"))
+//app.use(express.static("public"))
 app.use(express.json())
 //set main URL for end points
 
