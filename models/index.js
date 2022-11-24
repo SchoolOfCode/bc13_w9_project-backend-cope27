@@ -37,7 +37,7 @@ export async function createPost(newPost){
 // read function 
 
 export async function getAllPosts(){
-    const result = await query (`SELECT * FROM posts;`)
+    const result = await query (`SELECT * FROM posts ORDER BY id DESC;`)
     const posts = result.rows;
     return posts;
 
