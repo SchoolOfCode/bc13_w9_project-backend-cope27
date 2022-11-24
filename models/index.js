@@ -6,14 +6,27 @@ INSERT INTO posts
 (userName, projectGoal, projectType, projectTools, collaborators)
 VALUES
 ('Jimmy08','Lord of the Rings API', 'Build', 'React', 1);
+
+
+INSERT INTO posts
+(userName, projectGoal, projectType, projectTools, collaborators)
+VALUES 
+('Steph',
+ 'Build an API for helping people',
+ 'Build',
+ 'Express',
+ 4)
+RETURNING *;
+
+
 */
 
 // create function
     
 export async function createPost(newPost){
     const result = await query(`INSERT INTO posts
-    (userName, projectGoal, projectType, projectTools, collaborators)
-    VALUES ($1,$2,$3,$4,$5) RETURNING *;`,[newPost.userName, newPost.projectGoal, newPost.projectType, newPost.projectTools, newPost.collaborators])
+    (username, projectgoal, projecttype, projecttools, collaborators)
+    VALUES ($1,$2,$3,$4,$5) RETURNING *;`,[newPost.username, newPost.projectgoal, newPost.projecttype, newPost.projecttools, newPost.collaborators])
     const post = result.rows[0]
     console.log("createPost post: ", post)
 

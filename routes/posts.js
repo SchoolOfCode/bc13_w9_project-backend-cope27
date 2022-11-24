@@ -7,10 +7,10 @@ const router = express.Router()
 /*
 
     {
-    "userName": "Steph",
-    "projectGoal": "Build an API for helping people",
-    "projectType": "Build",
-    "projectTools": "Express",
+    "username": "Steph",
+    "projectgoal": "Build an API for helping people",
+    "projecttype": "Build",
+    "projecttools": "Express",
     "collaborators": "4"
 }
 */
