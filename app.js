@@ -3,6 +3,7 @@ import morgan from "morgan"
 import router from "./routes/posts.js" //need to create routes/posts.js
 import cors from 'cors';
 
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -20,3 +21,5 @@ app.use("/api/posts",router);
 app.listen(PORT,() => {
     console.log(`server is running on port ${PORT}`)
 });
+
+export default app;

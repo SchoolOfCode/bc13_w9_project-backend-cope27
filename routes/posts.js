@@ -1,7 +1,8 @@
 import express from "express"
 import { createPost, getAllPosts } from "../models/index.js"
 const router = express.Router()
-
+// import supertest from 'supertest';
+// import { test, describe, expect, beforeEach, afterAll, beforeAll, afterEach } from '@jest/globals'
 
 //import functions from models
 /*
