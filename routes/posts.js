@@ -1,6 +1,6 @@
-import express from "express"
-import { createPost, getAllPosts } from "../models/index.js"
-const router = express.Router()
+import express from "express";
+import { createPost, getAllPosts } from "../models/index.js";
+const router = express.Router();
 // import supertest from 'supertest';
 // import { test, describe, expect, beforeEach, afterAll, beforeAll, afterEach } from '@jest/globals'
 
@@ -16,26 +16,23 @@ const router = express.Router()
 }
 */
 // Create *
-router.post("/", async (req,res)=>{
-    const newPostInfo = req.body;
+router.post("/", async (req, res) => {
+  const newPostInfo = req.body;
 
-    console.log("newPostInfo: ", newPostInfo)
+  console.log("newPostInfo: ", newPostInfo);
 
-    const newPost = await createPost(newPostInfo);
-    res.json({success: true, payload: newPost});
-})
+  const newPost = await createPost(newPostInfo);
+  res.status(201).json({ success: true, payload: newPost });
+});
 
 // Read *
-router.get("/", async (req,res)=>{
-    // run get posts function and assign that to a variable
-    const allPosts = await getAllPosts();
-    res.json({success: true, payload: allPosts});
-
-})
+router.get("/", async (req, res) => {
+  // run get posts function and assign that to a variable
+  const allPosts = await getAllPosts();
+  res.json({ success: true, payload: allPosts });
+});
 // Update
 
 // Delete
 
-
-
-export default router 
+export default router;
