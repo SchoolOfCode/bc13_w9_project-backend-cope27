@@ -1,33 +1,10 @@
-// we will create this after we set up the database
 import query from "../db/index.js";
-
-/*
-INSERT INTO posts
-(userName, projectGoal, projectType, projectTools, collaborators)
-VALUES
-('Jimmy08','Lord of the Rings API', 'Build', 'React', 1);
-
-
-INSERT INTO posts
-(userName, projectGoal, projectType, projectTools, collaborators)
-VALUES 
-('Steph',
- 'Build an API for helping people',
- 'Build',
- 'Express',
- 4)
-RETURNING *;
-
-
-*/
 
 /**
  * This creates a new post
  * @param {} newPost new post object
  * @returns post with newly created id
  */
-
-// create function
 
 export async function createPost(newPost) {
   const result = await query(
@@ -43,12 +20,8 @@ export async function createPost(newPost) {
     ]
   );
   const post = result.rows[0];
-  console.log("createPost post: ", post);
-
   return post;
 }
-
-// read function
 
 /**
  * Queries and retrieves all entries from post database
