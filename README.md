@@ -1,4 +1,3 @@
-
 # Sjardin
 
 Sjardin is a collaborative platform we have designed to respond to three main problems boot campers on the School of Code programme experience.
@@ -9,6 +8,31 @@ People may have ideas for projects they’d wish to work on with someone- but ca
 
 Different boot campers have different levels of confidence, technical ability, or experience which can make it hard to advertise openly about wanting to connect, or be able to find the right person to connect with.
 
+**Created 11.2022**
+
+Front-end repository here: https://github.com/SchoolOfCode/bc13_w9_project-frontend-cope27
+
+Back-end repository here: https://github.com/SchoolOfCode/bc13_w9_project-backend-cope27
+
+## Authors
+
+@Craig G https://github.com/CregCodes
+
+@Colin F https://github.com/dubhais
+
+@Stephanie Njeri https://github.com/stephaniezai
+
+@Fenton Hutson https://github.com/FentonPlusPlus
+
+## Features
+
+Current features available in the app:
+
+- Post a Project
+
+- Search for a Project by filters
+
+- View All Projects
 
 ## Documentation
 
@@ -29,9 +53,9 @@ A fragment example can be seen below.
 CREATE TABLE posts (
     id INTEGER PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
     username TEXT,
-    projectgoal TEXT, 
-    projecttype TEXT, 
-    projecttools TEXT, 
+    projectgoal TEXT,
+    projecttype TEXT,
+    projecttools TEXT,
     collaborators INT
 );
 
@@ -72,8 +96,6 @@ Tests cover status code and payload objects.
 
 Ensure you have a .env file set up before running tests
 
-
-
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file
@@ -81,8 +103,3 @@ To run this project, you will need to add the following environment variables to
 `PORT` (change this Port number to be different from front end port number)
 
 `POSTGRES_CONNECTION_URL` (recommend having a back up database- especially if using elephantSQL)
-
-
-
-
-
