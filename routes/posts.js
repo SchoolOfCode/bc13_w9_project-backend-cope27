@@ -18,7 +18,7 @@ const router = express.Router();
  * If successful, returns an object with status of 201, and body with success as true and a payload of the successfully created object with a unique ID
  */
 
-router.post("/", async (req, res) => {
+router.post("/", async  (req, res) => {
   const newPostInfo = req.body;
   const newPost = await createPost(newPostInfo);
   res.status(201).json({ success: true, payload: newPost });
