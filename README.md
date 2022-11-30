@@ -103,3 +103,5 @@ To run this project, you will need to add the following environment variables to
 `PORT` (change this Port number to be different from front end port number)
 
 `POSTGRES_CONNECTION_URL` (recommend having a back up database- especially if using elephantSQL)
+
+Fenton is great! 
