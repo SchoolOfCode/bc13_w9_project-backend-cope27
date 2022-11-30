@@ -23,7 +23,7 @@ describe("GET payload tests", () => {
     });
   });
 
-  test("to GET posts and see data is accurate within fields", async () => {
+  test.skip("to GET posts and see data is accurate within fields", async () => {
     const response = await supertest(app).get("/api/posts");
     expect(response.status).toBe(200);
     expect(response.body).toStrictEqual({

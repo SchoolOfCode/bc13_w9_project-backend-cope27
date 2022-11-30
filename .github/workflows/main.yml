@@ -24,11 +24,12 @@ jobs:
       # run ESLint & Prettier
       # - run: npm run lint
 
-      - run: npm install prettier
-      
+      # - run: npm install prettier
+
       - run: npm run prettier
+      # - run: npm run test ## requires a database to be installed somehow
       # verify that there are no build errors
-      - run: npm run build
+      # - run: npm run build
       # # run tests with Cypress
       # - name: Cypress run
       #   uses: cypress-io/github-action@v2
